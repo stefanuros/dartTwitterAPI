@@ -13,7 +13,7 @@ the future.
 
 Below is an example of how the package would be used.
 ```dart
-import 'package:twitterApi/twitterApi.dart';
+import 'package:twitter_api/twitter_api.dart';
 
 // Creating the twitterApi Object with the secret and public keys
 // These keys are generated from the twitter developer page
