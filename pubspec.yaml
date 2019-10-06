@@ -1,5 +1,5 @@
 name: twitter_api
-version: 0.1.1
+version: 0.1.2
 author: "Dart Team <misc@dartlang.org>"
 homepage: https://github.com/stefanuros/dartTwitterAPI
 description: An easy way to authenticate and make requests to the Twitter API.
