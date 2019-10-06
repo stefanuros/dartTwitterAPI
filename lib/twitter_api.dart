@@ -134,7 +134,7 @@ class twitterApi {
   /// 
   /// The twitter developer website also goes into detail about [options] that can
   /// be applied. These [options] are of type Map<String, String>.
-  getTwitterRequest(String method, String url, {Map<String, String> options, int timeout: 10}) async {
+  getTwitterRequest(String method, String url, {Map<String, String> options, int timeout = 10}) async {
     if(options == null) options = {};
 
     // Create the nonce
