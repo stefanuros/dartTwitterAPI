@@ -42,7 +42,7 @@ Future twitterRequest = _twitterOauth.getTwitterRequest(
 );
 
 // Wait for the future to finish
-Response res = await twitterRequest;
+var res = await twitterRequest;
 
 // Print off the response
 print(res.statusCode); 
