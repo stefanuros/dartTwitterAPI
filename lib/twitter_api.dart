@@ -302,27 +302,24 @@ class twitterApi {
     String output = "";
 
     // Loop through each letter in val
-    for(var i = 0; i < bytes.length; i++) {
+    for(int i = 0; i < bytes.length; i++) {
       // Get the individual character
-      var char = bytes[i];
+      final char = bytes[i];
 
       // If the byte is not listed in the table, encode it
       // Otherwise, add it to the output
       if(!_percentEncodeValues.contains(char)) {
-        // Add a % to the output
-        // output += "%"; 
-        output += String.fromCharCode(0x25);
+        // Add a % to the output and
         // convert char to a string representing the hexidecimal of char
         // Get the specific byte of the string that we want to use
         // make it uppercase (required by twitter)
         // Add the string to the output
-        output += char.toRadixString(16)[0].toUpperCase();
-        output += char.toRadixString(16)[1].toUpperCase();
+        output += '%' + char.toRadixString(16).toUpperCase().padLeft(2, '0');
       }
       else
       {
         // Add the character to the output list of bytes
-        output += val[i];
+        output += String.fromCharCode(char);
       }
     }
 
